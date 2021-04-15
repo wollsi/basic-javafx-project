@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * JavaFX App
  */
-public class RushHour extends Application {
+public class Main extends Application {
 
     private static Scene activeScene;
 
@@ -18,7 +18,7 @@ public class RushHour extends Application {
         activeScene = new Scene(loadFXML("primary"));
 
         // loading the style sheet
-        activeScene.getStylesheets().add(RushHour.class.getResource("styles.css").toExternalForm());
+        activeScene.getStylesheets().add(Main.class.getResource("styles.css").toExternalForm());
 
         // set the scene onto the stage
         stage.setScene(activeScene);
@@ -45,7 +45,7 @@ public class RushHour extends Application {
      * @throws IOException if the fxml file is not found
      */
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(RushHour.class.getResource(fxml + ".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
     }
 
